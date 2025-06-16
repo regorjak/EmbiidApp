@@ -1,0 +1,21 @@
+body {
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333333;
+  }
+  
+  h1 {
+    color: #003366;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: #003366;
+  }
+  
+  .text {
+    font-size: 18px;
+    color: #555555;
+  }
+  
