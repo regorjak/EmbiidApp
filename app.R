@@ -18,7 +18,8 @@ top20_list <- list()
 
 # collecting top 150 players in PPG for each year
 for (year in years) {
-  file_path <- paste0("C:/Users/regor/OneDrive - RMIT University/Desktop/Data Visualisation/A3/EmbiidApp/Data/", year, ".xlsx")
+  file_path <- file.path(data_dir, paste0(year, ".xlsx"))
+    
   
   df <- read_excel(file_path) %>%
     filter(!is.na(Player), Player != "Player") %>%
@@ -302,6 +303,3 @@ output$shooting_heatmap <- renderPlotly({
 
 # RUN APP
 shinyApp(ui = ui, server = server)
-
- library(rsconnect)
-    rsconnect::deployApp("C:/Users/regor/OneDrive - RMIT University/Desktop/Data Visualisation/A3/EmbiidApp")
